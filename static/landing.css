@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* BODY */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #7b2ff7, #3a1c71);
+    color: white;
+}
+
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 80px;
+}
+
+
+/* LOGO */
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+/* LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* SEARCH */
+.search-box {
+    display: flex;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.search-box input {
+    border: none;
+    padding: 8px 15px;
+    outline: none;
+}
+
+.search-box button {
+    border: none;
+    background: transparent;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+
+    height: calc(100vh - 100px);
+
+    padding-left: 100px;
+}
+
+
+.hero-content {
+    max-width: 500px;
+}
+
+
+/* TEXT */
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+
+    padding: 12px 30px;
+    background: white;
+    color: #3a1c71;
+
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+} 
+
+.btn:hover {
+    background: #eee;
+}

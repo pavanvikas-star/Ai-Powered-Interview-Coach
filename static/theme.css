@@ -1,0 +1,71 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #ad75b9, #ab0bf6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Card */
+.auth-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    width: 350px;
+    padding: 30px;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Title */
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* Button */
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background: #00c6ff;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.auth-container button:hover {
+    background: #0072ff;
+}
+
+/* Links */
+.auth-container a {
+    color: #00c6ff;
+    text-decoration: none;
+}
+
+.auth-container p {
+    text-align: center;
+    margin-top: 15px;
+}

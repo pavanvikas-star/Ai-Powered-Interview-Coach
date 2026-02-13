@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* Main Box */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+/* Left Side */
+.left-box {
+    width: 250px;
+    height: 100vh;
+}
+
+.left-box h2 {
+    margin-bottom: 10px;
+}
+
+.left-box p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.left-box a {
+    color: purple;
+    text-decoration: none;
+}
+
+/* Inputs */
+.left-box input[type="text"],
+.left-box input[type="email"],
+.left-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Options */
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: purple;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #6a0dad;
+}
+
+/* Social */
+.social {
+    text-align: center;
+    margin: 20px 0 10px;
+    font-size: 14px;
+}
+
+.icons {
+    text-align: center;
+}
+
+.icons span {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: #3b5998;
+    color: white;
+    border-radius: 50%;
+    line-height: 35px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.icons span:last-child {
+    background: #00acee;
+}
+
+
+/* Right Side */
+.right-box {
+    width: 50%;
+    background: linear-gradient(135deg, #7b2ff7, #b721ff);
+    color: white;
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+.right-box h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.right-box p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+/* Login Button on Success Page */
+
+.login-link {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 25px;
+    background: rgb(194, 46, 194);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.login-link:hover {
+    background: #c128c1;
+}
+
+/* Home Page Buttons */
+
+.home-buttons {
+    margin-top: 30px;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-right: 15px;
+    background: rgb(255, 255, 255);
+    border: 3px solid rgb(144, 27, 165);
+    color: rgb(144, 27, 165);
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.home-btn:hover {
+    background: #fb3dee;
+}
+
+/* Register Button Style */
+.home-btn.outline {
+    background: transparent;
+    border: 3px solid rgb(144, 27, 165);
+    color: rgb(144, 27, 165);
+}
+
+.home-btn.outline:hover {
+    background: rgb(250, 70, 229);
+    color: rgb(144, 27, 165);
+}

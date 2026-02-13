@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="left-box">
+
+    <h2>Complete Profile</h2>
+
+    <form method="post" action="/profile/{{user.id}}">
+
+      <input type="url" name="linkedin" placeholder="LinkedIn URL">
+
+      <input type="url" name="github" placeholder="GitHub URL">
+
+      <input type="text" name="resume" placeholder="Resume Link">
+
+      <button type="submit">Save</button>
+
+    </form>
+
+  </div>
+
+
+  <div class="right-box">
+
+    <h1>Profile Setup</h1>
+
+    <p>
+      Add your professional links once
+      to unlock dashboard features.
+    </p>
+
+  </div>
+
+</div>
+
+</body>
+</html>

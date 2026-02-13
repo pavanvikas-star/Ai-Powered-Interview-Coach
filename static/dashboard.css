@@ -1,0 +1,161 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 220px;
+    background: linear-gradient(135deg, #a526b6f7, #4c3c8c98);
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.active {
+    font-weight: bold;
+}
+
+
+/* Main */
+
+.main {
+    flex: 1;
+    padding: 30px;
+    background: #f4f4f4;
+}
+
+
+/* Cards */
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card {
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+}
+
+.card a {
+    color: white;
+    text-decoration: underline;
+}
+
+.purple {
+    background: #db2a2a;
+}
+
+.blue {
+    background: #039be5;
+}
+
+.orange {
+    background: #0cd738;
+}
+
+
+/* Analytics */
+
+.analytics {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.stat {
+    background: white;
+    padding: 15px;
+    width: 180px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+/* Tasks */
+
+.tasks {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.task {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+/* Avatar Section */
+
+.avatar-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.avatar-box img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.avatar-box input {
+    display: none;
+}
+
+.avatar-box label {
+    text-align: center;
+}
+
+.avatar-box input:checked+img {
+    border: 3px solid #7b2ff7;
+}
+/* User Header */
+
+.user-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid #7b2ff7;
+}

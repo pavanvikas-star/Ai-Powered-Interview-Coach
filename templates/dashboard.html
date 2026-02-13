@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/dashboard.css" />
+
+    <style>
+      /* Active menu style (optional) */
+      .sidebar a {
+        cursor: pointer;
+      }
+
+      .sidebar a.active {
+        background: rgba(255, 255, 255, 0.2);
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h2>AI Coach</h2>
+
+        <a id="menu-dashboard" class="active" onclick="showDashboard()"
+          >Dashboard</a
+        >
+        <a id="menu-analytics" onclick="showAnalytics()">Analytics</a>
+        <a id="menu-tasks" onclick="showTasks()">Task List</a>
+
+        <a href="/settings/{{ user.id }}">Settings</a>
+        <a href="/">Logout</a>
+      </div>
+
+      <!-- Main -->
+      <div class="main">
+        <!-- User Header -->
+        <div class="user-header">
+          <img src="/static/avatars/{{ user.avatar }}" class="profile-avatar" />
+
+          <h1>Hello, {{ user.username }}</h1>
+        </div>
+
+        <!-- Cards (Dashboard Section) -->
+        <div id="dashboard-section">
+          <div class="cards">
+            <!-- LinkedIn -->
+            <div class="card purple">
+              <h3>LinkedIn</h3>
+
+              {% if user.linkedin %}
+              <p>Connected ✅</p>
+              <a href="{{ user.linkedin }}" target="_blank">Open</a>
+              {% else %}
+              <p>Missing ❌</p>
+              <a href="/profile/{{ user.id }}">Add</a>
+              {% endif %}
+            </div>
+
+            <!-- GitHub -->
+            <div class="card blue">
+              <h3>GitHub</h3>
+
+              {% if user.github %}
+              <p>Connected ✅</p>
+              <a href="{{ user.github }}" target="_blank">Open</a>
+              {% else %}
+              <p>Missing ❌</p>
+              <a href="/profile/{{ user.id }}">Add</a>
+              {% endif %}
+            </div>
+
+            <!-- Resume -->
+            <div class="card orange">
+              <h3>Resume</h3>
+
+              {% if user.resume %}
+              <p>Uploaded ✅</p>
+              <a href="{{ user.resume }}" target="_blank">View</a>
+              {% else %}
+              <p>Missing ❌</p>
+              <a href="/profile/{{ user.id }}">Upload</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+        <!-- Analytics -->
+        <div id="analytics-section" style="display: none">
+          <h2>Analytics</h2>
+
+          <div class="stats">
+            <div>Today: 2 Sessions</div>
+            <div>Weekly: 8 Sessions</div>
+            <div>Monthly: 24 Sessions</div>
+          </div>
+        </div>
+
+        <!-- Task List -->
+        <div id="tasks-section" style="display: none">
+          <h2>Tasks</h2>
+
+          <ul>
+            <li>Mock Interview</li>
+            <li>Resume Review</li>
+            <li>Coding Practice</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      function resetMenu() {
+        document.getElementById("menu-dashboard").classList.remove("active");
+        document.getElementById("menu-analytics").classList.remove("active");
+        document.getElementById("menu-tasks").classList.remove("active");
+      }
+
+      function hideAll() {
+        document.getElementById("dashboard-section").style.display = "none";
+        document.getElementById("analytics-section").style.display = "none";
+        document.getElementById("tasks-section").style.display = "none";
+      }
+
+      function showDashboard() {
+        hideAll();
+        resetMenu();
+
+        document.getElementById("dashboard-section").style.display = "block";
+        document.getElementById("menu-dashboard").classList.add("active");
+      }
+
+      function showAnalytics() {
+        hideAll();
+        resetMenu();
+
+        document.getElementById("analytics-section").style.display = "block";
+        document.getElementById("menu-analytics").classList.add("active");
+      }
+
+      function showTasks() {
+        hideAll();
+        resetMenu();
+
+        document.getElementById("tasks-section").style.display = "block";
+        document.getElementById("menu-tasks").classList.add("active");
+      }
+    </script>
+  </body>
+</html>
